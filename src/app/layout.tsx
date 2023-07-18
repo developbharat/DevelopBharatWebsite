@@ -34,6 +34,21 @@ export const metadata: Metadata = {
     title: SiteSettings.name,
     description: SiteSettings.description,
     siteName: SiteSettings.name,
+    images: [
+      {
+        url: SiteSettings.ogUrl,
+        width: 1200,
+        height: 600,
+        alt: SiteSettings.name,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SiteSettings.name,
+    description: SiteSettings.description,
+    images: [SiteSettings.ogUrl],
+    creator: '@shadcn',
   },
   icons: {
     icon: '/meta/logo.svg',
