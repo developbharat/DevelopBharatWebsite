@@ -28,4 +28,4 @@ git push origin --tags
 ```
 
 4. Visit Github Repository and manually create a release via
-   [Github repository link](https://github.com/developbharat/mehra-records-entertainment)
+   [Github repository link](https://github.com/developbharat/DevelopBharatWebsite)
