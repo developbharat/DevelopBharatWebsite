@@ -64,11 +64,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <ServerThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <html lang="en">
         <head />
-        <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
+        <body
+          className={cn(
+            'min-h-screen bg-buttercup-50 dark:bg-gradient-to-t dark:from-[#434343] dark:to-[#000000] font-sans antialiased',
+            fontSans.variable,
+          )}>
           <Providers attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
-              <div className="flex-1">{children}</div>
+              <div className="flex-1 py-6 relative">{children}</div>
               <SiteFooter />
             </div>
           </Providers>
