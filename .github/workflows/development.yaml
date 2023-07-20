@@ -1,8 +1,5 @@
 name: Preview Deployment
 on:
-  push:
-    branches:
-      - dev
   pull_request:
     types: [opened]
     branches:
