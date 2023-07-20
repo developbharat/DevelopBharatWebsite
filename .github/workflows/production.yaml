@@ -5,7 +5,16 @@ on:
       - main
     types: [published]
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout
+      - name: Lint
+        run: |
+          npm run lint && npm run format:check
+
   build_and_deploy:
+    needs: [lint]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
