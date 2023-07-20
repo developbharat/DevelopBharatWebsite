@@ -1,11 +1,29 @@
-name: Production Deployment
+name: Preview Deployment
 on:
+  push:
+    branches:
+      - dev
   pull_request:
+    types: [opened]
     branches:
       - dev
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          cache: 'npm'
+          cache-dependency-path: 'package.json'
+      - run: npm install
+      - run: npm run lint
+      - run: npm run format:check
+
   build_and_deploy:
+    needs: [lint]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
