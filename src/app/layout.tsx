@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   manifest: `${SiteSettings.url}/meta/developbhrat.webmanifest`,
   other: {
-    'google-site-verification': 'FjY0frqHCJQTIT5QuG9zrCZdj7PK0',
+    'google-site-verification': 'FjY0frqHCJQTIT5QuG9zrCZdj7PK0-GoVX0UG2ay_HU',
   },
 };
 
