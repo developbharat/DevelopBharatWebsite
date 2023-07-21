@@ -8,6 +8,7 @@ import { cn } from '~lib/utils';
 import { SiteSettings } from '~settings/site';
 import '../css/main.css';
 import { ServerThemeProvider } from '@wits/next-themes';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: {
@@ -63,7 +64,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <ServerThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <html lang="en">
-        <head />
+        <Head>
+          <meta name="google-site-verification" content="FjY0frqHCJQTIT5QuG9zrCZdj7PK0-GoVX0UG2ay_HU" />
+        </Head>
         <body
           className={cn(
             'min-h-screen bg-buttercup-50 dark:bg-gradient-to-t dark:from-[#434343] dark:to-[#000000] font-sans antialiased',
