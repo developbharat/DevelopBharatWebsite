@@ -58,15 +58,15 @@ export const metadata: Metadata = {
     apple: '/meta/apple-touch-icon.png',
   },
   manifest: `${SiteSettings.url}/meta/developbhrat.webmanifest`,
+  other: {
+    'google-site-verification': 'FjY0frqHCJQTIT5QuG9zrCZdj7PK0',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <ServerThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <html lang="en">
-        <Head>
-          <meta name="google-site-verification" content="FjY0frqHCJQTIT5QuG9zrCZdj7PK0-GoVX0UG2ay_HU" />
-        </Head>
         <body
           className={cn(
             'min-h-screen bg-buttercup-50 dark:bg-gradient-to-t dark:from-[#434343] dark:to-[#000000] font-sans antialiased',
