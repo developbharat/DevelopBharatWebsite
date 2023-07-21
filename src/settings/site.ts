@@ -9,7 +9,7 @@ export const SiteSettings = {
     twitter: 'https://twitter.com/BharatDevelop',
     github: 'https://github.com/developbharat',
     linkedIn: 'https://www.linkedin.com/company/developbharat/about',
-    instagram: '#',
+    instagram: 'https://www.instagram.com/developbharat/',
   },
 };
 

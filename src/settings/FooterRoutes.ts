@@ -44,7 +44,7 @@ export const FooterColumns: IFooterColumns = {
         { name: 'Youtube', href: SiteSettings.social.youtube, sublabel: null },
         { name: 'Github', href: SiteSettings.social.github, sublabel: null },
         { name: 'Twitter', href: SiteSettings.social.twitter, sublabel: null },
-        { name: 'Instagram', href: SiteSettings.social.instagram, sublabel: 'Soon' },
+        { name: 'Instagram', href: SiteSettings.social.instagram, sublabel: null },
         { name: 'LinkedIn', href: SiteSettings.social.linkedIn, sublabel: null },
       ],
     },
