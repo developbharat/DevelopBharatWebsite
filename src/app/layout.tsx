@@ -58,8 +58,8 @@ export const metadata: Metadata = {
     apple: '/meta/apple-touch-icon.png',
   },
   manifest: `${SiteSettings.url}/meta/developbhrat.webmanifest`,
-  other: {
-    'google-site-verification': 'FjY0frqHCJQTIT5QuG9zrCZdj7PK0-GoVX0UG2ay_HU',
+  verification: {
+    google: 'FjY0frqHCJQTIT5QuG9zrCZdj7PK0-GoVX0UG2ay_HU',
   },
 };
 
