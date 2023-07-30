@@ -1,6 +1,6 @@
 export const SiteRotues = {
   home: '/',
   about: '/about',
-  products: '/products', // TODO: Pending
+  products: '/products',
   tools: '/tools', // TODO: Pending
 };
