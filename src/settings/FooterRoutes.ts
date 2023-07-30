@@ -14,8 +14,8 @@ export const FooterColumns: IFooterColumns = {
     {
       name: 'Product',
       links: [
-        { name: 'Products', href: '/products', sublabel: 'Soon' },
-        { name: 'Tools', href: '/products', sublabel: 'Soon' },
+        { name: 'Products', href: '/products', sublabel: null },
+        { name: 'Tools', href: '/tools', sublabel: 'Soon' },
         { name: 'Contact Us', href: '/contact', sublabel: 'Soon' },
         { name: 'Donate Us', href: '/donate', sublabel: 'Soon' },
       ],
