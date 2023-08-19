@@ -25,8 +25,8 @@ export const FooterColumns: IFooterColumns = {
       links: [
         { name: 'About Us', href: '/about', sublabel: null },
         { name: 'Blog', href: '/articles', sublabel: 'Soon' },
-        { name: 'Terms & Conditions', href: '/policies/terms', sublabel: 'Soon' },
-        { name: 'Data Protection', href: '/policies/data', sublabel: 'Soon' },
+        { name: 'Terms & Conditions', href: '/policies/terms', sublabel: null },
+        { name: 'Data Protection', href: '/policies/data', sublabel: null },
       ],
     },
     {
