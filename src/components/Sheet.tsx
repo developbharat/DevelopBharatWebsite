@@ -12,9 +12,7 @@ const SheetTrigger = SheetPrimitive.Trigger;
 
 const SheetClose = SheetPrimitive.Close;
 
-const SheetPortal = ({ className, ...props }: SheetPrimitive.DialogPortalProps) => (
-  <SheetPrimitive.Portal className={cn(className)} {...props} />
-);
+const SheetPortal = ({ ...props }: SheetPrimitive.DialogPortalProps) => <SheetPrimitive.Portal {...props} />;
 SheetPortal.displayName = SheetPrimitive.Portal.displayName;
 
 const SheetOverlay = React.forwardRef<
@@ -45,9 +43,7 @@ const sheetVariants = cva(
           'inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm',
       },
     },
-    defaultVariants: {
-      side: 'right',
-    },
+    defaultVariants: { side: 'right' },
   },
 );
 
