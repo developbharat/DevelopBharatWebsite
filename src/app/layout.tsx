@@ -1,5 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Providers } from '~components/Providers';
 import { SiteFooter } from '~components/SiteFooter';
 import { SiteHeader } from '~components/SiteHeader';
@@ -8,26 +8,21 @@ import { cn } from '~lib/utils';
 import { SiteSettings } from '~settings/site';
 import '../css/main.css';
 import { ServerThemeProvider } from '@wits/next-themes';
-import Head from 'next/head';
 
-export const metadata: Metadata = {
-  title: {
-    default: SiteSettings.name,
-    template: `%s - ${SiteSettings.name}`,
-  },
-  description: SiteSettings.description,
-  keywords: ['Develop Bharat', 'Develop Bharat Website', 'India', 'Bharat'],
-  authors: [
-    {
-      name: 'Develop Bharat',
-      url: 'https://www.developbharat.com',
-    },
-  ],
-  creator: 'Develop Bharat',
+export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
+};
+
+export const metadata: Metadata = {
+  title: { default: SiteSettings.name, template: `%s - ${SiteSettings.name}` },
+  description: SiteSettings.description,
+  keywords: ['Develop Bharat', 'Develop Bharat Website', 'India', 'Bharat'],
+  authors: [{ name: 'Develop Bharat', url: 'https://www.developbharat.com' }],
+  creator: 'Develop Bharat',
+
   metadataBase: new URL(SiteSettings.url),
   openGraph: {
     type: 'website',
@@ -36,14 +31,7 @@ export const metadata: Metadata = {
     title: SiteSettings.name,
     description: SiteSettings.description,
     siteName: SiteSettings.name,
-    images: [
-      {
-        url: SiteSettings.ogUrl,
-        width: 1200,
-        height: 600,
-        alt: SiteSettings.name,
-      },
-    ],
+    images: [{ url: SiteSettings.ogUrl, width: 1200, height: 600, alt: SiteSettings.name }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -52,15 +40,9 @@ export const metadata: Metadata = {
     images: [SiteSettings.ogUrl],
     creator: '@shadcn',
   },
-  icons: {
-    icon: '/meta/logo.svg',
-    shortcut: '/meta/favicon-16x16.png',
-    apple: '/meta/apple-touch-icon.png',
-  },
+  icons: { icon: '/meta/logo.svg', shortcut: '/meta/favicon-16x16.png', apple: '/meta/apple-touch-icon.png' },
   manifest: `${SiteSettings.url}/meta/developbhrat.webmanifest`,
-  verification: {
-    google: 'FjY0frqHCJQTIT5QuG9zrCZdj7PK0-GoVX0UG2ay_HU',
-  },
+  verification: { google: 'FjY0frqHCJQTIT5QuG9zrCZdj7PK0-GoVX0UG2ay_HU' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

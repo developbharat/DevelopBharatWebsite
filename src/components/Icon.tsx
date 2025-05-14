@@ -8,6 +8,8 @@ type IconProps = { label: string; icon: keyof typeof icons } & LucideProps & Ref
 export const Icon = ({ label, icon, ...props }: IconProps) => {
   const IconComp = icons[icon];
 
+  if (!IconComp) return null;
+
   return (
     <AccessibleIcon label={label}>
       <IconComp
